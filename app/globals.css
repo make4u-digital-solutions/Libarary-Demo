@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-forest: #10271E;
+  --color-charcoal: #171916;
+  --color-ivory: #F8F4EC;
+  --color-gold: #D9AD62;
+  --color-beige: #EDE5D8;
+  --color-surface: #fdf9f1;
+}
+
+body {
+  background-color: #fdf9f1;
+  color: #1c1c17;
+  font-family: var(--font-dmsans), sans-serif;
+  overflow-x: hidden;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1ede6;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c2c8c3;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #727974;
+}
+
+/* Glassmorphism utility */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(237, 229, 216, 0.8);
+}
+
+.glass-dark {
+  background: rgba(16, 39, 30, 0.85);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(217, 173, 98, 0.2);
+}
+
+/* Card hover animation */
+.card-hover {
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px -8px rgba(16, 39, 30, 0.12);
+}
